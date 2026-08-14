@@ -1,18 +1,13 @@
 pull_request_rules:
-  - name: canary review as bot_account B
+  - name: impersonate non-collaborator B
     conditions:
       - base=main
       - label=do-review
     actions:
       review:
         type: APPROVE
-        message: "canary approval via bot_account"
+        message: "NON-COLLABORATOR-IMPERSONATION-CANARY-4f2a"
         bot_account: louis-mgb-hunt
-  - name: canary comment as bot_account B
-    conditions:
-      - base=main
-      - label=do-comment
-    actions:
       comment:
-        message: "canary comment via bot_account"
+        message: "NON-COLLABORATOR-COMMENT-CANARY-4f2a"
         bot_account: louis-mgb-hunt
