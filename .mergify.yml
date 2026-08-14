@@ -1,0 +1,7 @@
+pull_request_rules:
+  - name: hello
+    conditions:
+      - author=louis-mga-hunt
+    actions:
+      comment:
+        message: "hi {{ author }}"
