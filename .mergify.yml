@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: hello
+  - name: comment with title
     conditions:
-      - author=louis-mga-hunt
+      - label=test-template
     actions:
       comment:
-        message: "hi"
+        message: "PR Title: {{title}} | Author: {{author}} | Body: {{body}}"
