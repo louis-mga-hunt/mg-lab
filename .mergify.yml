@@ -4,4 +4,4 @@ pull_request_rules:
       - author=louis-mga-hunt
     actions:
       comment:
-        message: "hi {{ author }}"
+        message: "PROBE result=[{{ 7 * 7 }}]"
