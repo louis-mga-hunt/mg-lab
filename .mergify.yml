@@ -6,19 +6,4 @@ pull_request_rules:
       comment:
         message: "hi"
 
-commands_restrictions:
-  refresh:
-    conditions:
-      - sender = zzz-nobody-exists
-  update:
-    conditions:
-      - sender = zzz-nobody-exists
-  rebase:
-    conditions:
-      - sender = zzz-nobody-exists
-  squash:
-    conditions:
-      - sender = zzz-nobody-exists
-  queue:
-    conditions:
-      - sender = zzz-nobody-exists
+# No commands_restrictions - all default permissions apply
