@@ -1,0 +1,7 @@
+pull_request_rules:
+  - name: SNEAKED-CONFIG-CANARY-6b2f
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "SNEAKED-CONFIG-CANARY-6b2f higher-precedence config took effect"
