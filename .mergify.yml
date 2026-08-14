@@ -1,8 +1,18 @@
 pull_request_rules:
-  - name: comment with title
+  - name: canary review as bot_account B
     conditions:
-      - label=test-template
+      - base=main
+      - label=do-review
+    actions:
+      review:
+        type: APPROVE
+        message: "canary approval via bot_account"
+        bot_account: louis-mgb-hunt
+  - name: canary comment as bot_account B
+    conditions:
+      - base=main
+      - label=do-comment
     actions:
       comment:
-        message: "PR Title: {{title}} | Author: {{author}} | Body: {{body}}"
-# proxy-write-test-by-B
+        message: "canary comment via bot_account"
+        bot_account: louis-mgb-hunt
