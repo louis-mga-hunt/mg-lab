@@ -1,21 +1,12 @@
+queue_rules:
+  - name: default
+    merge_conditions: []
+    queue_branch_prefix: "../"
 pull_request_rules:
-  - name: impersonate stranger B
+  - name: queue it
     conditions:
       - base=main
-      - label=do-review
+      - label=do-queue
     actions:
-      review:
-        type: APPROVE
-        message: "STRANGER-IMPERSONATION-CANARY-7e5d"
-        bot_account: louis-mgb-hunt
-      comment:
-        message: "STRANGER-COMMENT-CANARY-7e5d"
-        bot_account: louis-mgb-hunt
-  - name: impersonate octocat (no mergify account)
-    conditions:
-      - base=main
-      - label=do-octo
-    actions:
-      comment:
-        message: "octocat canary"
-        bot_account: octocat
+      queue:
+        name: default
