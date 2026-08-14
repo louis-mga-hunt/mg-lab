@@ -5,7 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: "hi"
-commands_restrictions:
-  refresh:
-    conditions:
-      - sender=zzz-not-louis-hunter
