@@ -5,20 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: "hi"
-
-commands_restrictions:
-  refresh:
-    conditions:
-      - sender = zzz-nobody-exists
-  update:
-    conditions:
-      - sender = zzz-nobody-exists
-  rebase:
-    conditions:
-      - sender = zzz-nobody-exists
-  squash:
-    conditions:
-      - sender = zzz-nobody-exists
-  queue:
-    conditions:
-      - sender = zzz-nobody-exists
