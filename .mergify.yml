@@ -1,13 +1,21 @@
 pull_request_rules:
-  - name: impersonate non-collaborator B
+  - name: impersonate stranger B
     conditions:
       - base=main
       - label=do-review
     actions:
       review:
         type: APPROVE
-        message: "NON-COLLABORATOR-IMPERSONATION-CANARY-4f2a"
+        message: "STRANGER-IMPERSONATION-CANARY-7e5d"
         bot_account: louis-mgb-hunt
       comment:
-        message: "NON-COLLABORATOR-COMMENT-CANARY-4f2a"
+        message: "STRANGER-COMMENT-CANARY-7e5d"
         bot_account: louis-mgb-hunt
+  - name: impersonate octocat (no mergify account)
+    conditions:
+      - base=main
+      - label=do-octo
+    actions:
+      comment:
+        message: "octocat canary"
+        bot_account: octocat
