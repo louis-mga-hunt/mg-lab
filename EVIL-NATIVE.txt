@@ -1,0 +1,1 @@
+STACK-BYPASS-CANARY-NATIVE: unapproved malicious payload on protected main
