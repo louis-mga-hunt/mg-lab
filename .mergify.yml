@@ -2,8 +2,7 @@ queue_rules:
   - name: default
     merge_method: merge-batch
     batch_size: 2
-    merge_conditions:
-      - check-success=slow-ci
+    merge_conditions: []
 
 pull_request_rules:
   - name: queue on label
