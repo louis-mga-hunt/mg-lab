@@ -1,14 +1,9 @@
-merge_protections:
-  - name: require security review
-    if:
-      - base=main
-    success_conditions:
-      - label=security-reviewed
-
 queue_rules:
   - name: default
-    merge_method: merge
-    merge_conditions: []
+    merge_method: merge-batch
+    batch_size: 2
+    merge_conditions:
+      - check-success=slow-ci
 
 pull_request_rules:
   - name: queue on label
@@ -17,8 +12,3 @@ pull_request_rules:
     actions:
       queue:
         name: default
-  - name: automerge on label
-    conditions:
-      - label=automerge
-    actions:
-      merge:
