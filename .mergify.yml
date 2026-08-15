@@ -1,3 +1,10 @@
+merge_protections:
+  - name: require security review
+    if:
+      - base=main
+    success_conditions:
+      - label=security-reviewed
+
 queue_rules:
   - name: default
     merge_method: merge
