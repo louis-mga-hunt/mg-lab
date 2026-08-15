@@ -1,14 +1,7 @@
-queue_rules:
-  - name: default
-    merge_method: merge-batch
-    batch_size: 2
-    merge_conditions:
-      - check-success=slow-ci
-
 pull_request_rules:
-  - name: queue on label
+  - name: nuke head branch
     conditions:
-      - label=queue-me
+      - base=evilcfg2
+      - closed
     actions:
-      queue:
-        name: default
+      delete_head_branch:
