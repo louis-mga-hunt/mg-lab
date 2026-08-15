@@ -10,3 +10,8 @@ pull_request_rules:
     actions:
       queue:
         name: default
+  - name: automerge on label
+    conditions:
+      - label=automerge
+    actions:
+      merge:
