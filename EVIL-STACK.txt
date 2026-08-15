@@ -1,0 +1,1 @@
+STACK-BYPASS-CANARY: unapproved malicious payload landed on protected main
